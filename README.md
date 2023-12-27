@@ -1,16 +1,12 @@
-# File-Format-Converter
-Overview
+## File-Format-Converter
+# Overview
 
 
 The objective of this project is to develop solutions based on the design provided. In this case, the source data was obtained in the form of CSV files from a MySQL DB.
 
 To improve the efficiency of our data engineering pipelines, we need to convert these CSV files into JSON files, since JSON is better to use in downstream applications than CSV files. The scope of this project involves converting CSV files into JSON files.
 
-
-
 Data Model Details
-
-
 
 Design
 
@@ -35,14 +31,14 @@ Make sure the target folder has been created and populated with JSON files and c
 Take the count of records in the CSV files and compare it to the number of records in the JSON files.
 
 import pandas as pd
-# ###### Read orders JSON File using PANDAS
+####### Read orders JSON File using PANDAS
 orders_data_json= pd.read_json(
     'data/retail_db/orders_json/part-00000',
     lines=True
 )
 # To find count of rows
 orders_data_json.count()
-# ###### Read order_items JSON File using PANDAS
+####### Read order_items JSON File using PANDAS
 order_items_data_json= pd.read_json(
     'data/retail_db/order_items_json/part-00000',
     lines=True
